@@ -118,18 +118,6 @@ summary(model, input_size=(64, 60, 1))
 
 import torch.optim as optim
 
-# Step 2: Define RNN Model (Moved from O-9lYRgI97QL to ensure model is defined)
-class RNNModel(nn.Module):
-    def __init__(self, input_size = 1, hidden_size = 64, num_layers = 2, output_size = 1):
-      super(RNNModel, self).__init__()
-      self.rnn = nn.RNN(input_size, hidden_size, num_layers, batch_first = True)
-      self.fc = nn.Linear(hidden_size, output_size)
-
-    def forward(self, x):
-      out, _ = self.rnn(x)
-      out = self.fc(out[:,-1,:])
-      return out
-
 # Instantiate the model (Moved from EaAR46dm99qb to ensure model is defined)
 model = RNNModel().to(device)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
