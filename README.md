@@ -42,6 +42,7 @@ Use the trained model to predict stock prices on the test dataset. Convert the n
 ### Register Number: 212224230281
 
 ```python
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -176,8 +177,6 @@ plt.legend()
 plt.show()
 print(f'Predicted Price: {predicted_prices[-1]}')
 print(f'Actual Price: {actual_prices[-1]}')
-
-
 ```
 
 ### OUTPUT
